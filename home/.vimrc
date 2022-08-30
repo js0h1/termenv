@@ -45,8 +45,8 @@ if has("syntax")
 endif
 
 " 컬러 스킴 사용
-color slate
-
+"color slate
+colorscheme zenburn
 
 set nocompatible
 
