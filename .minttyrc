@@ -1,0 +1,8 @@
+Columns=120
+Rows=40
+FontHeight=14
+Font=나눔고딕코딩
+ForegroundColour=0,0,0
+BackgroundColour=255,255,255
+ThemeFile=nord
+CursorType=block
