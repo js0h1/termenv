@@ -42,4 +42,16 @@ endif
 " 구문 강조 사용
 if has("syntax")
  syntax on
-endif" 컬러 스킴 사용
+endif
+
+" 컬러 스킴 사용
+color slate
+
+
+set nocompatible
+
+call plug#begin()
+
+Plug 'sheerun/vim-polyglot'
+
+call plug#end()
