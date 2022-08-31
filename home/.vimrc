@@ -55,3 +55,8 @@ call plug#begin()
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()
+
+set cursorline
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
+autocmd InsertEnter * highlight CursorLine cterm=NONE ctermbg=darkgrey ctermfg=NONE
+autocmd InsertLeave * highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
