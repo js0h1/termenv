@@ -1,6 +1,6 @@
 set langmenu=ko_KR.UTF-8
-set lines=60 columns=120
-set guifont=나눔고딕코딩:h14:cHANGEUL:qDEFAULT
+set lines=50 columns=150
+set guifont=D2Coding:h12:cHANGEUL:qDEFAULT
 set hlsearch " 검색어 하이라이팅
 set nu " 줄번호
 set autoindent " 자동 들여쓰기
