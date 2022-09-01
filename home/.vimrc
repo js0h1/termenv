@@ -49,10 +49,9 @@ endif
 colorscheme zenburn
 
 set cursorline
-highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
-autocmd InsertEnter * highlight CursorLine cterm=NONE ctermbg=darkgrey ctermfg=NONE
-autocmd InsertLeave * highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
-
+highlight CursorLine cterm=NONE ctermbg=darkyellow ctermfg=NONE guibg=darkyellow
+autocmd InsertLeave * highlight CursorLine ctermbg=darkyellow guibg=darkyellow
+autocmd InsertEnter * highlight CursorLine ctermbg=NONE guibg=NONE
 set nocompatible
 
 call plug#begin()
