@@ -49,8 +49,8 @@ endif
 colorscheme zenburn
 
 set cursorline
-highlight CursorLine cterm=NONE ctermbg=darkyellow ctermfg=NONE guibg=darkyellow
-autocmd InsertLeave * highlight CursorLine ctermbg=darkyellow guibg=darkyellow
+highlight CursorLine cterm=NONE ctermbg=darkgrey ctermfg=NONE guibg=darkgrey
+autocmd InsertLeave * highlight CursorLine ctermbg=darkgrey guibg=darkgrey
 autocmd InsertEnter * highlight CursorLine ctermbg=NONE guibg=NONE
 set nocompatible
 
@@ -58,7 +58,13 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 call plug#end()
 
-nnoremap <C-n> :NERDTreeToggle<CR>
+set autochdir
+nnoremap <C-n> :NERDTree .<CR>
+nnoremap <C-b> :NERDTreeToggle<CR>
+nnoremap <C-.> :bn<CR>
+nnoremap <C-,> :bp<CR>
+nnoremap <C-l> :ls<CR>
+nnoremap <C-w> :bw<CR>
 
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
