@@ -1,0 +1,74 @@
+git clone https://github.com/js0h1/termenv.git termenv; cp -rf termenv/home/. ~; rm -rf termenv
+
+(옵션) <필수>
+
+파일
+:e.: 파일 탐색기로 열기
+!: 시스템 커맨드
+%: 편집 중인 파일
+* :! Python %: 편집 중인 파일 파이썬 실행
+
+탐색
+H: 화면 맨 위
+M: 화면 중앙
+L: 화면 아래
+gg: 파일 맨 위
+G: 파일 맨 아래
+(num)G: 숫자 줄로 이동
+/<검색어>: 검색
+n: 다음 검색
+?: 이전 검색
+
+편집
+u: Undo
+ctrl+r: Redo
+.: 이전 명령 반복
+x: 커서 글자 지우기(2번 이상 누르면 입력모드 전환)
+r: 커서 1글자 덮어쓰기
+shift+r: 커서 부분부터 덮어쓰기
+v: 선택
+ctrl+v: 수직 선택
+(num)dd: 줄 삭제
+(num)yy: 줄 복사
+p: 붙여 넣기
+dit: 태그 내용 지우기
+di<괄호, 따옴표>: 내용 지우기
+dat: 태그 전체 지우기
+da<괄호, 따옴표>: 묶음 전체 지우기
+dw: 커서부터 단어 끝까지 지우기
+daw: 단어 지우기
+dap: 문단 지우기
+das: 문장 지우기
+d<num>k: 위 몇줄 지우기
+d<num>j: 아래 몇줄 지우기
+df(ch): 커서 뒤쪽 문자까지 지우기
+dt(ch): 커서 뒤쪽 문자 제외하고 지우기
+dF(ch): 커서 앞쪽 문자까지 지우기
+dT(ch): 커서 앞쪽 문자 제외하고 지우기
+* d 대신 y(copy), v(select), c(change) 가능
+
+주석
+:norm i#: 선택한 줄 맨 앞에 # 추가
+:norm 1x: 선택한 맨 앞 1글자 지우기
+
+화면 분할 :help windows
+:(num)sp (file): 화면을 가로로 분할
+:(num)vs (file): 화면을 세로로 분할
+ctrl+w, <커서>: 원하는 방향으로 화면을 이동
+ctrl+w, w: 시계 방향으로 이동
+ctrl+w, W: 반시계 방향으로 이동
+ctrl+w, o: 나머지 분할 닫기
+ctrl+w, r: 다음 분할과 위치 바꾸기
+ctrl+w, =: 모든 분할 크기 균등하게
+ctrl+w, <num> >: 창 너비를 숫자만큼 증가(< 감소)
+ctrl+w, <num> +: 창 높이를 숫자만큼 증가(- 감소)
+ctrl+w, <num> _: 창 높이를 최대로(| 너비)
+:qa: 모든 분할 닫기
+
+탭 관리 :help tabpage
+:tabn: 탭 추가
+:tabe (file): 탭으로 파일 열기
+:tabc: 탭 닫기
+:tabs: 현재 열려있는 모든 탭 정보
+ctrl+pgup, ctrl+pgdn: 탭 이동
+$vim -p <file1> <file2> <file3>: 여러 파일 탭으로 열기
