@@ -1,6 +1,6 @@
 set langmenu=ko_KR.UTF-8
 set lines=50 columns=150
-set guifont=D2Coding:h12:cHANGEUL:qDEFAULT
+set guifont=D2Coding:h14:cHANGEUL:qDEFAULT
 set hlsearch " 검색어 하이라이팅
 set nu " 줄번호
 set autoindent " 자동 들여쓰기
@@ -48,15 +48,19 @@ endif
 "color slate
 colorscheme zenburn
 
-set nocompatible
-
-call plug#begin()
-
-Plug 'sheerun/vim-polyglot'
-
-call plug#end()
-
 set cursorline
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
 autocmd InsertEnter * highlight CursorLine cterm=NONE ctermbg=darkgrey ctermfg=NONE
 autocmd InsertLeave * highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
+
+set nocompatible
+
+call plug#begin()
+Plug 'preservim/nerdtree'
+call plug#end()
+
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+call plug#begin()
+Plug 'sheerun/vim-polyglot'
+call plug#end()
